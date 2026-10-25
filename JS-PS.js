@@ -46,3 +46,47 @@ while(num>0){
 }
 
 console.log("num=",sum);
+
+let lt=10; let ut=20;
+
+for(let i=lt;i<=ut;i++){
+    document.write(i);
+    document.write("<br />");
+}
+//////////////////
+let ar=9;
+let f=1;
+
+for(let i=2;i<=ar;i++){
+    if(ar%i==0){
+        f++;
+    }
+}
+
+if(f==2){
+    console.log(`${ar} is a prime number`)
+}
+else{
+    console.log(`${ar} is not prime number`)
+}
+///////////////
+
+let A=10; let B=5; let C=25;
+if(A>B){
+    if(A>C){
+        console.log(`${A} a is greatest`)
+    }
+    else{
+        console.log(`${C} c is greatest`)
+    }
+}
+else{
+    if(B>C){
+                console.log(`${B} is b greatest`)
+
+    }
+    else{
+                console.log(`${C} c is greatest`)
+
+    }
+}
