@@ -90,3 +90,11 @@ else{
 
     }
 }
+
+let aa=10;
+let bb=20;
+let cc=58;
+
+let k=(aa>bb?(aa>cc?aa:cc):(bb>cc?bb:cc))
+
+console.log("KKK",k);
