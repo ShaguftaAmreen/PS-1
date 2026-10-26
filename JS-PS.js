@@ -84,7 +84,7 @@ else{
     if(B>C){
                 console.log(`${B} is b greatest`)
 
-    }
+    }    
     else{
                 console.log(`${C} c is greatest`)
 
