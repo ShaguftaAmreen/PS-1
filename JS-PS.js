@@ -97,4 +97,33 @@ let cc=58;
 
 let k=(aa>bb?(aa>cc?aa:cc):(bb>cc?bb:cc))
 
-console.log("KKK",k);
+console.log("KKK",k); 
+
+/////////////////////////////////////////////////////
+
+function calAverage(students) {
+
+return students.map((student)=>{
+            let avg=0
+
+    if(student.notes.length>0){
+        let total = student.notes.reduce((acc,note)=>{
+         acc+=note
+         return acc
+        },0)
+        avg=total/student.notes.length;
+        
+    }
+    return avg
+})
+
+}
+
+let students = [
+  { name: "John", notes: [3, 5, 4] },
+  { name: "Alice", notes: [] }
+];
+
+let result = calAverage(students);
+
+console.log(result);
