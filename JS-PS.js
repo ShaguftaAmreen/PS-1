@@ -177,6 +177,26 @@ function quickSort(arr) {
     return [...quickSort(left), pivot, ...quickSort(right)];
 }
 
-let arr = [10, 7, 8, 9, 1, 5];
+let arr2 = [10, 7, 8, 9, 1, 5];
 
-console.log(quickSort(arr));
+console.log(quickSort(arr2)); 
+
+//////////////////////////////////////
+
+let arr3 = [64, 25, 12, 22, 11];
+
+for (let i = 0; i < arr3.length - 1; i++) {
+
+    for (let j = 0; j < arr3.length - 1 - i; j++) {
+
+        if (arr3[j] > arr3[j + 1]) {
+
+            let temp = arr3[j];
+            arr3[j] = arr3[j + 1];
+            arr3[j + 1] = temp;
+
+        }
+    }
+}
+
+console.log(arr3);
