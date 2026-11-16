@@ -121,9 +121,32 @@ return students.map((student)=>{
 
 let students = [
   { name: "John", notes: [3, 5, 4] },
-  { name: "Alice", notes: [] }
+
+    { name: "Alice", notes: [] }
 ];
 
 let result = calAverage(students);
 
 console.log(result);
+
+//////////////////////////////////////
+
+let arr = [64, 25, 12, 22, 11];
+
+for (let i = 0; i < arr.length - 1; i++) {
+
+    let minIndex = i;
+
+    for (let j = i + 1; j < arr.length; j++) {
+
+        if (arr[j] < arr[minIndex]) {
+            minIndex = j;
+        }
+    }
+
+    let temp = arr[i];
+    arr[i] = arr[minIndex];
+    arr[minIndex] = temp;
+}
+
+console.log(arr);
