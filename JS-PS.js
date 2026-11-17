@@ -200,3 +200,35 @@ for (let i = 0; i < arr3.length - 1; i++) {
 }
 
 console.log(arr3);
+
+/////////////////////////////
+
+let arr4 = [10, 20, 30, 40, 50, 60, 70, 80];
+
+let target = 50;
+
+let low = 0;
+let high = arr4.length - 1;
+
+let found = false;
+
+while (low <= high) {
+
+    let mid = Math.floor((low + high) / 2);
+
+    if (arr4[mid] === target) {
+        console.log(`Element found at index ${mid}`);
+        found = true;
+        break;
+    }
+    else if (arr4[mid] < target) {
+        low = mid + 1;
+    }
+    else {
+        high = mid - 1;
+    }
+}
+
+if (!found) {
+    console.log("Element not found");
+}
