@@ -257,4 +257,44 @@ for (let i = 0; i < array.length - 1; i++) {
 console.log(array);
 
 
-console.log(array[4]);
+console.log(array[4]); 
+
+
+function longestPalindrome(str) {
+  let longest = "";
+
+  function expand(left, right) {
+    while (
+      left >= 0 &&
+      right < str.length &&
+      str[left] === str[right]
+    ) {
+      left--;
+      right++;
+    }
+
+    return str.substring(left + 1, right);
+  }
+
+  for (let i = 0; i < str.length; i++) {
+    // Odd length palindrome
+    let odd = expand(i, i);
+
+    // Even length palindrome
+    let even = expand(i, i + 1);
+
+    if (odd.length > longest.length) {
+      longest = odd;
+    }
+
+    if (even.length > longest.length) {
+      longest = even;
+    }
+  }
+
+  return longest;
+}
+
+console.log(longestPalindrome("babad")); // bab
+console.log(longestPalindrome("cbbd"));  // bb
+console.log(longestPalindrome("racecar")); // racecar
